@@ -1,0 +1,34 @@
+---
+driver:
+  name: gce
+  project: scenic-block-221016
+  email: hi3unb@gmail.com
+  zone: us-east1-c
+  tags:
+    - dev
+    - test-kitchen
+    - inspec
+
+transport:
+  username: ebt
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 14.10.9
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: windows-2012-r2-dc
+    driver:
+      image_project: windows-cloud
+      image_family: windows-2012-r2
+      disk_size: 50
+
+suites:
+  - name: bitlocker
+    verifier:
+      inspec_tests:
+        - .
+    attributes:

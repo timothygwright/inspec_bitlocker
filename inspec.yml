@@ -1,0 +1,10 @@
+name: bitlocker
+title: InSpec Profile
+maintainer: Nghiem Ba Hieu
+copyright: Nghiem Ba Hieu
+copyright_email: hi3unb@gmail.com
+license: Apache-2.0
+summary: Bitlocker InSpec Compliance Profile
+version: 0.1.0
+supports:
+  platform-family: windows
